@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Log In</title>
+
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        
+   <!-- Favicon -->
+   <link href="{% static 'img/brand/favicon.png' %}" rel="icon" type="image/png">
+
+
+  <!-- Icons -->
+  <link href="{% static 'vendor/nucleo/css/nucleo.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+
+  <!-- Theme CSS -->
+  <link type="text/css" href="{% static 'css/argon.min.css' %}" rel="stylesheet">
+
+  <style>
+        body  {
+            align-items: center;
+            padding-top: 100px;
+            padding-left:100px;
+            background-size:cover;
+            background-position: center;
+        }
+        .btn btn-secondary{
+            align-content: center;
+        }
+
+       .box{
+           background-color: rgba(255, 255, 255, 0.5);
+           border: 1px solid #fff ;
+           border-radius:2px;
+           width: 500px;
+           box-shadow: inset 0 1.5px 3px rgba(190,190,190,.4), 0 0 0 4px slategray;
+       }
+
+       .data{
+           color: #000;
+       }
+
+    
+        
+  </style>
+        
+</head>
+<body background="{%static 'Images/home_img.jpg' %}">
+    <form method="POST" action="{% url 'log_in' %}">
+            {% csrf_token %}
+        <div class="container box">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <label class="data">Username or Email</label><br>
+                        <input type="text" class="form-control" name="name" placeholder="Username/email" />
+                        <br>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="data">Password</label><br>
+                        <input type="password" class="form-control" name="psw" placeholder="password" />
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-secondary" value="Log In"/>
+        
+
+            </div>
+        </div> 
+          
+    </form>
+
+
+     <!-- Core -->
+     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+     <script src="{% static 'vendor/popper/popper.min.js' %}"></script>
+     <script src="{% static 'vendor/bootstrap/bootstrap.min.js' %}"></script>
+
+     <!-- Theme JS -->
+     <script src="{% static 'js/argon.min.js' %}"></script>
+  </body>
+</html>

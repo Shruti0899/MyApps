@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables</title>
+        <style>
+
+            #desc{
+                font-family: cursive;
+                color: darkcyan;
+                text-align:left;
+            } 
+
+                  
+        </style>
+    </head>
+    <body>
+        <p id="desc">
+            Choose the table from the drop down list below
+        </p>
+        <form action = "{% url 'table_analysis' %}" method = "POST">
+            {% csrf_token %}
+        <select name='table_drop_down'>
+            <option value="menu">MENU</option>
+            {% for i in table %}
+    
+                <option id="drop_down" name="list" onclick="drop_down_select()" value={{i}}>{{i}}</option>
+              
+            {% endfor %}  
+        </select>
+
+            <center><p>Coverting the file:</p><br>
+                <select id="select" name="file_menu" onclick="func()">
+                    <option value="csv" >.csv</option>
+                    <option value="xls">.xls</option>
+                    <option value="xlsx">.xlsx</option>
+                </select></center>
+
+        <center><p><input type="submit" name="submit" value="submit"></p></center>
+        
+        
+    </form>
+        <script>
+            function drop_down_select(){
+               var index = document.getElementById("drop_down").selectedIndex
+               console.log(index)
+    
+            }
+
+            function func(){
+                    var index = document.getElementById("select").value
+
+            }    
+            </script>    
+    </body>
+</html>

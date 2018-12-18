@@ -1,0 +1,4 @@
+,id,password,last_login,is_superuser,username,first_name,email,is_staff,is_active,date_joined,last_name
+0,1,pbkdf2_sha256$120000$eH6CUD9wLRf6$VSolSCgOYW72d35+ivBY5SkrbERw5C1FbAQsk3oMrKY=,2018-10-09 09:19:00.617863,1,shruti,,alpha@gmail.com,1,1,2018-10-09 09:11:28.394289,
+1,2,pbkdf2_sha256$120000$uVf8AlVxhm08$ZC+eXu7xLzm+EeZuK+zU0d8/EcGK1434BJHXy/h24lg=,,0,anand,,,0,1,2018-10-09 09:15:27.268234,
+2,3,pbkdf2_sha256$120000$r6bzyCbpXMhC$kHHgF2zhcjcZB6Rv4ddMmdRVvJBgZYwworcnsbJgnvo=,2018-10-14 11:17:43.301335,1,shruti0899,,shruthi0899@gmail.com,1,1,2018-10-14 11:17:04.450452,

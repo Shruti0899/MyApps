@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+             Table details
+        </title>
+           
+        <style>
+            p{
+                text-align: center;
+                font-family: sans-serif;
+                color: darkorange;
+
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <p>Table details are as follows:</p>
+        </center>
+        
+                {% csrf_token %}
+         {% for i in table_data %}
+          <center>{{i}}<br> </center>
+          {% endfor %} 
+          <a href="{% static './media/auth_group.xlsx' %}" download>Download</a> 
+         <form> 
+          <p align="center">This file has been stored in C:\Users\Sneha\Desktop\Django\django_env\Myfirst\Myfirst_app\static\media</p>
+          <p align="center">To Download it trace out the location</p><br>
+          <center><input name="name" type="file"></center><br>
+
+          <center><input name="submit" type="submit" value="Submit"></center>
+
+        </form>
+        
+    </body>
+</html>

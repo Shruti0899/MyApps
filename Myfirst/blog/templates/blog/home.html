@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">       
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <title>
+            Home
+        </title>
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        
+         <!-- Favicon -->
+         <link href="{% static 'img/brand/favicon.png' %}" rel="icon" type="image/png">
+
+
+        <!-- Icons -->
+        <link href="{% static 'vendor/nucleo/css/nucleo.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+
+        <!-- Theme CSS -->
+        <link type="text/css" href="{% static 'css/argon.min.css' %}" rel="stylesheet">
+        <style>
+            #signup,#login{
+                margin-top: 20px;
+                margin-right: 20px;
+                margin-left: 10px;
+            }
+            body{
+                background-size:cover;
+                background-position: center;
+
+            }
+
+            #heading,p{
+                color:cornsilk;
+            }
+            
+        </style>
+    </head>
+    <body background="{% static 'Images/home_img.jpg' %}">
+            <button type="button" class="btn btn-secondary" id="signup" style="float:right;" onclick="myfunc()">Sign Up</button>
+            <button type="button" class="btn btn-secondary" id="login" style="float:right;" onclick="myfunc2()">Log In</button>
+            <br><br><br>
+            <br><br><br><br>
+            <center><h2 id="heading">What are blogging platforms?</h2></center>
+            <center><p>
+                Read on to dive deeper into the matter and explore the world of blogging 
+                platforms from their early days to their rise to popularity.
+            </p></center>
+
+        <!-- Core -->
+        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'vendor/popper/popper.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/bootstrap.min.js' %}"></script>
+
+        <!-- Theme JS -->
+        <script src="{% static 'js/argon.min.js' %}"></script>
+         <script>
+            function myfunc(){
+                location.href="{% url 'initial' %}"
+            }
+            function myfunc2(){
+                location.href="{% url 'log' %}"
+            }
+        </script>
+    </body>
+</html>
